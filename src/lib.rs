@@ -90,7 +90,7 @@ mod barrier;
 mod consumer;
 mod cursor;
 mod ringbuffer;
-mod producer;
+pub mod producer;
 mod builder;
 
 pub use builder::{build_single_producer, build_multi_producer, Builder, DependencyChain};
