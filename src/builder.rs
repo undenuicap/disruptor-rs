@@ -159,8 +159,8 @@ where
 	}
 
 	/// Set a name for the processor thread for the next added event handler.
-	pub fn thread_named(mut self, name: &'static str) -> Self {
-		self.thread_context.name = Some(name.to_owned());
+	pub fn thread_named(mut self, name: String) -> Self {
+		self.thread_context.name = Some(name);
 		self
 	}
 
@@ -227,7 +227,7 @@ where
 	}
 
 	/// Set a name for the processor thread for the next added event handler.
-	pub fn thread_named(mut self, name: &'static str) -> Self {
+	pub fn thread_named(mut self, name: String) -> Self {
 		self.builder = self.builder.thread_named(name);
 		self
 	}
